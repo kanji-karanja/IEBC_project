@@ -1,4 +1,4 @@
-#Group members for this project:
+# Group members for this project:
 1. Jane Nduta Manyi
 2. Joseph Njogu
 3. James Mwangi
@@ -7,9 +7,9 @@
 6. Ken Ngati
 7. Jacob Mogire
 
-#The project question:
+# The project question:
 Write a program that can be used by IEBC to register voters whenever there is an upcoming elections.
-##what is required:
+## what is required:
 1. National Identification Card/passport
 2. Information: where the person wants to vote from.
 3. IEBC Personnel will fill out the following information:
