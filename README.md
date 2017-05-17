@@ -29,3 +29,6 @@ Write a program that can be used by IEBC to register voters whenever there is an
 5. 1>>input from iebc official >output to confirm the input >confirmation of correctness>editing if error>confirmation if correct>sending to database if correct>exit/continue>>1/0
 //option//
 import java.sql.*;
+github.com/kanji-karanja
+repository: IEBC project
+fork>>clone>>work on the project individually>>push it>>create a pull request to incorporate it into the main project
