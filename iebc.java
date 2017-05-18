@@ -4,7 +4,6 @@ import java.util.Scanner;
 class Login{
   //declare and instantiate variables that will show the number of login attempts
   int trial=1, remaining;
-  int looper2= Register.looper;
   //this is a constructor
   Login(){
     //Outputs the name of the system
@@ -35,13 +34,11 @@ class Login{
     if(username.equals("IEBC") && password.equals("IEBC")){
       System.out.println("\nSuccess! You are being logged in");
       //introduce the next part of the program: Registering voters
-      while(looper2==1){
-        Register myRegister = new Register();
-      }
-
+    Register startprog =new Register();
+    startprog.LooperMethod();
     }
     else{
-      System.out.println("\nError! The username or password is incorrect");
+      System.out.println("\n>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>\nERROR! The username or password is incorrect\n>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>\n");
       //subtract to get the remaining number of login attempts
       remaining=3-trial;
       //output to the user the number of remaining login attempts
@@ -68,7 +65,7 @@ class Register{
   String fname,sname,lname,dist,div,loc,subloc,ward,consti,count,gen,change;
   int id,option;
   String state;
-  public int looper=1;
+  int looper=1;
   Register(){
     Scanner input= new Scanner(System.in);
     Scanner input2= new Scanner(System.in);
@@ -123,7 +120,8 @@ class Register{
     }
     void showdetails(){
       System.out.println("\nPlease confirm the following details:\n\n==============================================");
-      System.out.println("Name of the voter: "+fname+" "+sname+" "+lname);
+      System.out.println("\n\t\tVoter Details\n");
+      System.out.println("Name: "+fname+" "+sname+" "+lname);
       System.out.println("ID number: "+id);
       System.out.println("District: "+dist);
       System.out.println("Division: "+div);
@@ -150,5 +148,10 @@ class Register{
         looper=0;
       }
       }
+  }
+  void LooperMethod(){
+    while(looper==1){
+      Register myRegister = new Register();
+    }
   }
 }
