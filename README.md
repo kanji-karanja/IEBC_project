@@ -21,18 +21,18 @@ Write a program that can be used by IEBC to register voters whenever there is an
 1. National Identification Card/passport
 2. Information: where the person wants to vote from. **not Implemented**
 3. IEBC Personnel will fill out the following information:
-  1. First name
-  2. Second name
-  3. Third name
-  4. ID number
-  5. District
-  6. Division
-  7. Location
-  8. Sub Location
-  9. Ward
-  10. Constituency
-  11. County
-  12. Gender
+  * First name
+  * Second name
+  * Third name
+  * ID number
+  * District
+  * Division
+  * Location
+  * Sub Location
+  * Ward
+  * Constituency
+  * County
+  * Gender
 4. We shall use: looping,
 
 ### Procedure
