@@ -8,12 +8,12 @@ This project is about a program that can be used by IEBC to register voters when
 
 ## Group members for this project:
 1. Jane Nduta Manyi
-2. Joseph Njogu @njogu-joseph
+2. Joseph Njogu @joseph-njogu
 3. James Mwangi @mwangi-james
 4. John Chege
 5. Karim K. Kanji @kanji-karanja
 6. Ken Ngati
-7. Jacob Mogire
+7. Jacob Mogire @jacohwin
 
 ### The project question:
 Write a program that can be used by IEBC to register voters whenever there is an upcoming elections.
@@ -21,18 +21,18 @@ Write a program that can be used by IEBC to register voters whenever there is an
 1. National Identification Card/passport
 2. Information: where the person wants to vote from. **not Implemented**
 3. IEBC Personnel will fill out the following information:
-  A. First name
-  B. Second name
-  C. Third name
-  D. ID number
-  E. District
-  F. Division
-  G. Location
-  H. Sub Location
-  I. Ward
-  J. Constituency
-  K. County
-  L. Gender
+  1. First name
+  2. Second name
+  3. Third name
+  4. ID number
+  5. District
+  6. Division
+  7. Location
+  8. Sub Location
+  9. Ward
+  10. Constituency
+  11. County
+  12. Gender
 4. We shall use: looping,
 
 ### Procedure
