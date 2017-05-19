@@ -1,5 +1,12 @@
 //import Scanner class here
 import java.util.Scanner;
+public class IEBCwithArrays{
+  public static void main(String args[]){
+    //call the Login constructor
+    Login myLogin= new Login();
+  }
+}
+
 //Create login that deals with logging in to the system
 class Login{
   //declare and instantiate variables that will show the number of login attempts
@@ -57,44 +64,48 @@ class Login{
   }
 }
 }
-public class iebc{
-  public static void main(String args[]){
-    //call the Login constructor
-    Login myLogin= new Login();
-  }
-}
 class Register{
-  String fname,sname,lname,dist,div,loc,subloc,ward,consti,count,gen,change;
-  int id,option;
-  String state;
-  int looper=1;
+  String details[]={"fname","sname","lname","dist","div","loc","subloc","ward","consti","count","gen","change","state"};
+  //String fname,sname,lname,dist,div,loc,subloc,ward,consti,count,gen,change;
+  int id,option,looper=1;
   Register(){
     Scanner input= new Scanner(System.in);
     Scanner input2= new Scanner(System.in);
     System.out.println("\nVOTER REGISTRATION\n==================================\nPlease Fill in the form below to register the voter:\nFirst Name:");
-    fname = input.nextLine();
+    //fname = input.nextLine();
+    details[0] = input.nextLine();
     System.out.println("Second Name:");
-    sname = input.nextLine();
+    //sname = input.nextLine();
+    details[1] = input.nextLine();
     System.out.println("Last Name:");
-    lname = input.nextLine();
+    //lname = input.nextLine();
+    details[2] = input.nextLine();
     System.out.println("ID Number:");
     id= input2.nextInt();
     System.out.println("District:");
-    dist = input.nextLine();
+    //dist = input.nextLine();
+    details[3] = input.nextLine();
     System.out.println("Division:");
-    div = input.nextLine();
+    //div = input.nextLine();
+    details[4] = input.nextLine();
     System.out.println("Location:");
-    loc = input.nextLine();
+    //loc = input.nextLine();
+    details[5] = input.nextLine();
     System.out.println("Sub-location:");
-    subloc = input.nextLine();
+    //subloc = input.nextLine();
+    details[6] = input.nextLine();
     System.out.println("Ward:");
-    ward = input.nextLine();
+    //ward = input.nextLine();
+    details[7] = input.nextLine();
     System.out.println("Constituency");
-    consti = input.nextLine();
+    //consti = input.nextLine();
+    details[8] = input.nextLine();
     System.out.println("County");
-    count = input.nextLine();
+    //count = input.nextLine();
+    details[9] = input.nextLine();
     System.out.println("Gender:");
-    gen = input.nextLine();
+    //gen = input.nextLine();
+    details[10] = input.nextLine();
     showdetails();
   }
    void changeinfo(){
@@ -106,15 +117,15 @@ class Register{
     switch(option){
       case 1:{
         System.out.println("\nFirst Name:");
-        fname=newinputs.nextLine();};
+        details[0]=newinputs.nextLine();};
         break;
       case 2:{
         System.out.println("Second Name:");
-        sname=newinputs.nextLine();};
+        details[1]=newinputs.nextLine();};
         break;
       case 3:{
         System.out.println("Last Name:");
-        lname=newinputs.nextLine();};
+        details[2]=newinputs.nextLine();};
         break;
       case 4:{
         System.out.println("ID number:");
@@ -122,35 +133,35 @@ class Register{
       break;
       case 5:{
         System.out.println("District:");
-        dist=newinputs.nextLine();};
+        details[3]=newinputs.nextLine();};
       break;
       case 6:{
         System.out.println("Division:");
-        div=newinputs.nextLine();};
+        details[4]=newinputs.nextLine();};
       break;
       case 7:{
         System.out.println("Location:");
-        subloc=newinputs.nextLine();};
+        details[5]=newinputs.nextLine();};
       break;
       case 8:{
         System.out.println("Sub-Location:");
-        fname=newinputs.nextLine();};
+        details[6]=newinputs.nextLine();};
       break;
       case 9:{
         System.out.println("Ward:");
-        ward=newinputs.nextLine();};
+        details[7]=newinputs.nextLine();};
       break;
       case 10:{
         System.out.println("Constituency:");
-        consti=newinputs.nextLine();};
+        details[8]=newinputs.nextLine();};
       break;
       case 11:{
         System.out.println("County:");
-        count=newinputs.nextLine();};
+        details[9]=newinputs.nextLine();};
       break;
       case 12:{
         System.out.println("Gender:");
-        gen=newinputs.nextLine();};
+        details[10]=newinputs.nextLine();};
       break;
       default:System.out.println("Sorry your choice is invalid.");
     }
@@ -159,33 +170,33 @@ class Register{
     void showdetails(){
       System.out.println("\nPlease confirm the following details:\n\n==============================================");
       System.out.println("\n\t\tVoter Details\n");
-      System.out.println("Name: "+fname+" "+sname+" "+lname);
+      System.out.println("Name: "+details[0]+" "+details[1]+" "+details[2]);
       System.out.println("ID number: "+id);
-      System.out.println("District: "+dist);
-      System.out.println("Division: "+div);
-      System.out.println("Location: "+loc);
-      System.out.println("Sub-Location: "+subloc);
-      System.out.println("Ward: "+ward);
-      System.out.println("Constituency: "+consti);
-      System.out.println("County: "+count);
-      System.out.println("Gender: "+gen+"\n");
+      System.out.println("District: "+details[3]);
+      System.out.println("Division: "+details[4]);
+      System.out.println("Location: "+details[5]);
+      System.out.println("Sub-Location: "+details[6]);
+      System.out.println("Ward: "+details[7]);
+      System.out.println("Constituency: "+details[8]);
+      System.out.println("County: "+details[9]);
+      System.out.println("Gender: "+details[10]+"\n");
       System.out.println("==============================================");
       System.out.println("\nIs this information correct?(y/n)");
       Scanner input = new Scanner(System.in);
-      change=input.nextLine();
-      if(change.equals("n")){
+      details[11]=input.nextLine();
+      if(details[11].equals("n")){
       changeinfo();
       }
-      else if(change.equals("y")){
+      else if(details[11].equals("y")){
       System.out.println("\n<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<");
       System.out.println("SUCCESS! information is being uploaded!");
       System.out.println("<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<\n");
       System.out.println("Exit or continue(E/C)");
-      state = input.nextLine();
-      if(state.equals("C")){
+      details[12] = input.nextLine();
+      if(details[12].equals("C")){
         looper=1;
       }
-      else if(state.equals("E")){
+      else if(details[12].equals("E")){
         looper=0;
         System.out.println("==========================");
         System.out.println("©2017 Cryosoft Corporation");
