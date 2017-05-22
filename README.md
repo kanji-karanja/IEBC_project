@@ -42,7 +42,9 @@ Write a program that can be used by IEBC to register voters whenever there is an
 ### Procedure
 input from IEBC official > output to confirm the input > confirmation of correctness > editing if error > confirmation if correct > sending to database if correct > exit/continue > 1/0 or y/n
 ###  Optional features
+```
 import java.sql.*;
+```
 #### Added Notes
 How to get the repository:
 Get the repository at:
