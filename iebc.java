@@ -69,8 +69,9 @@ class Register{
   String state;
   int looper=1;
   Register(){
-    Scanner input= new Scanner(System.in);
-    Scanner input2= new Scanner(System.in);
+    Scanner input = new Scanner(System.in);
+    Scanner input2 = new Scanner(System.in);
+    Scanner input3 = new Scanner(System.in);
     System.out.println("\nVOTER REGISTRATION\n==================================\nPlease Fill in the form below to register the voter:\nFirst Name:");
     fname = input.nextLine();
     System.out.println("Second Name:");
@@ -78,7 +79,16 @@ class Register{
     System.out.println("Last Name:");
     lname = input.nextLine();
     System.out.println("ID Number:");
+    try{
     id= input2.nextInt();
+    }
+    catch(java.util.InputMismatchException e){
+      System.out.println("\nXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX");
+      System.out.println("Sorry! The input is invalid. Please put a number only");
+      System.out.println("XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX\n\nTry here again:");
+      id= input3.nextInt();
+      System.out.println("\n");
+    }
     System.out.println("District:");
     dist = input.nextLine();
     System.out.println("Division:");
@@ -101,7 +111,16 @@ class Register{
     System.out.println("\nChoose the detail to edit:");
     System.out.println("1. First name\t4. ID number\t7. Location\t10. Constituency\n2. Second Name\t5. District\t8. Sub-location\t11. County\n3. Last Name\t6. Division\t9. Ward\t12. Gender\n");
     Scanner input2 = new Scanner(System.in);
+    Scanner input3 = new Scanner(System.in);
+    try{
     option = input2.nextInt();
+    }
+    catch(java.util.InputMismatchException e){
+      System.out.println("\nXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX");
+      System.out.println("Sorry! The input is invalid. Please put a number only");
+      System.out.println("XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX\n\n");
+      changeinfo();
+    }
     Scanner newinputs = new Scanner(System.in);
     switch(option){
       case 1:{
@@ -118,7 +137,17 @@ class Register{
         break;
       case 4:{
         System.out.println("ID number:");
-        id=input2.nextInt();};
+        try{
+      id= input2.nextInt();
+    }
+    catch(java.util.InputMismatchException e){
+      System.out.println("\nXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX");
+      System.out.println("Sorry! The input is invalid. Please put a number only");
+      System.out.println("XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX\n\nTry here again:");
+      id= input3.nextInt();
+      System.out.println("\n");
+    }
+        };
       break;
       case 5:{
         System.out.println("District:");
@@ -180,7 +209,17 @@ class Register{
       System.out.println("\n<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<");
       System.out.println("SUCCESS! information is being uploaded!");
       System.out.println("<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<\n");
-      System.out.println("Exit or continue(E/C)");
+      exitStrategy();
+      }
+  }
+  void LooperMethod(){
+    while(looper==1){
+      Register myRegister = new Register();
+    }
+  }
+  void exitStrategy(){
+     System.out.println("Exit or continue(E/C)");
+     Scanner input = new Scanner(System.in);
       state = input.nextLine();
       if(state.equals("C")){
         looper=1;
@@ -191,11 +230,9 @@ class Register{
         System.out.println("©2017 Cryosoft Corporation");
         System.out.println("==========================");
       }
+      else{
+        System.out.println("\nSorry The input is invalid....\n");
+        exitStrategy();
+      }    
       }
-  }
-  void LooperMethod(){
-    while(looper==1){
-      Register myRegister = new Register();
-    }
-  }
 }
