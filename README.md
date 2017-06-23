@@ -53,3 +53,7 @@ repository name: [IEBC_project](http://github.com/kanji-karanja/IEBC_project)
 
 ##### What to do:
 fork>>clone>>work on the project individually>>push it>>create a pull request to incorporate it into the main project
+
+##### The Password on Prompt
+The username is IEBC and the password is IEBC.
+*Note: This is only for test purposes this is to be merged with SQL and a database so as to get optimal results*
